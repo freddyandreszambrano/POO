@@ -1,0 +1,130 @@
+
+/* Popup */
+.overlay {
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.3);
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	visibility: hidden;
+}
+
+.overlay.active {
+	visibility: visible;
+}
+
+.popup {
+	background-color: #f8f8f8;
+	border-radius: 3px;
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+	font-family: 'Montserrat', sans-serif;
+	max-width: 90%;
+	opacity: 0;
+	padding: 20px;
+	text-align: center;
+	transform: scale(0.7);
+	transition: opacity 0.3s ease,
+							transform 0.3s ease;
+	width: 500px;
+}
+
+.popup .btn-cerrar-popup {
+	display: block;
+	color: #bbbbbb;
+	line-height: 16px;
+	text-align: right;
+	transition: color 0.3s ease;
+}
+
+.popup .btn-cerrar-popup:hover,
+.popup .btn-cerrar-popup:focus,
+.popup .btn-cerrar-popup:active {
+	color: #000000;
+}
+
+.popup h3 {
+	font: 600 36px 'Montserrat', sans-serif;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+
+.popup h4 {
+	font: 300 26px 'Montserrat', sans-serif;
+	margin-bottom: 40px;
+}
+
+.popup form .contenedor-inputs input {
+	border: 1px solid #bbbbbb;
+	font-size: 18px;
+	height: 52px;
+	line-height: 52px;
+	margin-bottom: 20px;
+	text-align: center;
+	width: 100%;
+}
+
+.popup form .btn-submit {
+	background-color: #5e7de3;
+	border-radius: 3px;
+	border-style: none;
+	color: #ffffff;
+	cursor: pointer;
+	font: 300 16px 'Montserrat', sans-serif; 
+	height: 40px;
+	line-height: 40px;
+	padding: 0 20px;
+	transition: background-color 0.3s ease;
+}
+
+.popup form .btn-submit:hover,
+.popup form .btn-submit:focus,
+.popup form .btn-submit:active {
+	background-color: rgba(94, 125, 227, 0.9);
+}
+
+/* Animaciones */
+.popup.active {
+	opacity: 1;
+	transform: scale(1);
+}
+
+.popup.active h3 {
+	animation: entrada-titulo 0.8s 0.5s ease forwards;
+	opacity: 0;
+	transform: translateY(-25px);
+}
+
+.popup.active p {
+	animation: entrada-subtitulo 0.8s 0.5s ease forwards;
+	opacity: 0;
+	transform: translateY(25px);
+}
+
+.popup.active .contenedor-inputs {
+		animation: entrada-inputs 1s 1s ease forwards;
+		opacity: 0;
+}
+
+@keyframes entrada-titulo {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes entrada-subtitulo {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes entrada-inputs {
+	to {
+		opacity: 1;
+	}
+}

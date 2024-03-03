@@ -1,0 +1,360 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+    background: #fff;
+
+}
+nav{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    background: #fff;
+    width: 90px;
+    overflow: hidden;
+    transition: width 0.2s linear;
+    box-shadow: 0 20px 35px rgba( 0, 0, 0, 0.1);
+}
+.logo{
+    text-align: center;
+    display: flex;
+    transition: all 0.5s ease;
+    margin: 10px 0 0 10px;
+}
+.logo img{
+    width: 45px ;
+    height: 45px;
+    border-radius: 50%;
+
+}
+.logo span{
+    font-weight: bold;
+    padding-left: 15px;
+    font-size:  18px;
+    text-transform: uppercase;
+}
+a{
+    position: relative;
+    color: rgb(85, 83, 83);
+    font-size: 14px;
+    display: table;
+    width: 300px;
+    padding: 10px;
+}
+.nav-link:hover{
+    color: #ff8c00;
+}
+.nav-link:hover::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    background-color: #ff8c00; 
+    top: 0;
+    left: 0;
+}
+.bx{
+    position: relative;
+    width: 70px;
+    height: 40px;
+    top: 14px;
+    font-size: 20px;
+    text-align: center;
+}
+.nav-item{
+    position: relative;
+    top: 12px;
+    margin-left: 18px;
+
+}
+.a:hover{
+    background: #eee;
+
+}
+nav:hover{
+    width: 280px;
+    transition:  all 0.5s ease;
+}
+
+.logout{
+    position: absolute;
+    bottom: 0;
+
+}
+
+
+/* SEGUNDA PARTE */
+.contenedor{
+    width: 100%;
+    margin: 0 auto;
+    background-color: #83A2FF;
+    
+}
+.listado{
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+    text-align: center; 
+}
+
+.listado li{
+    color: white;
+    display: inline-block;
+    width: 200px;
+    padding: 10px;
+    border: none;
+    margin: 0 10px;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+
+.listado li .bx{
+    cursor: pointer;
+    text-align: center;
+    float: right;
+}
+.banner img {
+    text-align: center;
+    padding-top: 10px;
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+  }
+  
+.banner img span {
+   font-size: 1.5em;
+   color: #000;
+}
+
+/* div infov */
+.info_contex{
+    text-align: center;     
+    width: 80%;
+    margin: 50px;
+}
+
+/* table */
+table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0 auto;
+    padding-top: 100px;
+    width: 80%;
+    table-layout: fixed;
+}
+  
+  table caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+  }
+  
+  table tr {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: .35em;
+  }
+  
+  table th, table td {
+    padding: .625em;
+    text-align: center;
+  }
+  
+  table th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+  
+  @media screen and (max-width: 600px) {
+    table {
+      border: 0;
+    }
+  
+    table caption {
+      font-size: 1.3em;
+    }
+    
+    table thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    
+    table tr {
+      border-bottom: 3px solid #ddd;
+      display: block;
+      margin-bottom: .625em;
+    }
+    
+    table td {
+      border-bottom: 1px solid #ddd;
+      display: block;
+      font-size: .8em;
+      text-align: right;
+    }
+    
+    table td::before {
+      /*
+      * aria-label has no advantage, it won't be read inside a table
+      content: attr(aria-label);
+      */
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    
+    table td:last-child {
+      border-bottom: 0;
+    }
+  }
+
+
+
+
+  /* Popup */
+.overlay {
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.3);
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	visibility: hidden;
+}
+
+.overlay.active {
+	visibility: visible;
+}
+
+.popup {
+	background-color: #f8f8f8;
+	border-radius: 3px;
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+	font-family: 'Montserrat', sans-serif;
+	max-width: 90%;
+	opacity: 0;
+	padding: 20px;
+	text-align: center;
+	transform: scale(0.7);
+	transition: opacity 0.3s ease,
+							transform 0.3s ease;
+	width: 500px;
+}
+
+.popup .btn-cerrar-popup {
+	display: block;
+	color: #bbbbbb;
+	line-height: 16px;
+	text-align: right;
+	transition: color 0.3s ease;
+}
+
+.popup .btn-cerrar-popup:hover,
+.popup .btn-cerrar-popup:focus,
+.popup .btn-cerrar-popup:active {
+	color: #000000;
+}
+
+.popup h3 {
+	font: 600 36px 'Montserrat', sans-serif;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+
+.popup h4 {
+	font: 300 26px 'Montserrat', sans-serif;
+	margin-bottom: 40px;
+}
+
+.popup form .contenedor-inputs input {
+	border: 1px solid #bbbbbb;
+	font-size: 18px;
+	height: 52px;
+	line-height: 52px;
+	margin-bottom: 20px;
+	text-align: center;
+	width: 100%;
+}
+
+.popup form .btn-submit {
+	background-color: #5e7de3;
+	border-radius: 3px;
+	border-style: none;
+	color: #ffffff;
+	cursor: pointer;
+	font: 300 16px 'Montserrat', sans-serif; 
+	height: 40px;
+	line-height: 40px;
+	padding: 0 20px;
+	transition: background-color 0.3s ease;
+}
+
+.popup form .btn-submit:hover,
+.popup form .btn-submit:focus,
+.popup form .btn-submit:active {
+	background-color: rgba(94, 125, 227, 0.9);
+}
+
+/* Animaciones */
+.popup.active {
+	opacity: 1;
+	transform: scale(1);
+}
+
+.popup.active h3 {
+	animation: entrada-titulo 0.8s 0.5s ease forwards;
+	opacity: 0;
+	transform: translateY(-25px);
+}
+
+.popup.active h4 {
+	animation: entrada-subtitulo 0.8s 0.5s ease forwards;
+	opacity: 0;
+	transform: translateY(25px);
+}
+
+.popup.active .contenedor-inputs {
+		animation: entrada-inputs 1s 1s ease forwards;
+		opacity: 0;
+}
+
+@keyframes entrada-titulo {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes entrada-subtitulo {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes entrada-inputs {
+	to {
+		opacity: 1;
+	}
+}

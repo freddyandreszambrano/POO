@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/main.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="#" class="logo">
+                    <img src="/portada2.png" alt="">
+                    <span class="nav-item">CODE INFO</span>
+                </a>
+            </li>
+            <li><a href="#" class="nav-link">
+                <i class='bx bxs-home'></i>
+                <span class="nav-item">HOME</span>
+            </a></li>
+            <li><a href="#" class="nav-link">
+                <i class='bx bxl-meta'></i>
+                <span class="nav-item">PROFILE</span>
+            </a></li>
+            <li><a href="#" class="nav-link">
+                <i class='bx bxs-bowl-rice'></i>
+                <span class="nav-item">wallet</span>
+            </a></li>
+            <li><a href="#" class="nav-link">
+                <i class='bx bxs-leaf'></i>
+                <span class="nav-item">analytics</span>
+            </a></li>
+            <li><a href="#" class="nav-link">
+                <i class='bx bx-task'></i>
+                <span class="nav-item">task</span>
+            </a></li>
+            <li><a href="#" class="nav-link">
+                <i class='bx bxs-lemon'></i>
+                <span class="nav-item">setting</span>
+            </a></li>
+            <li><a href="#" class="nav-link">
+                <i class='bx bx-help-circle'></i>
+                <span class="nav-item">Help</span>
+            </a></li>
+            <li><a href="#" class="logout nav-link" >
+                <i class='bx bx-log-out'></i>
+                <span class="nav-item">log out</span>
+            </a></li>
+        </ul>
+    </nav>
+
+    <div class="contenedor">
+        <ul class="listado">
+            <li><a href="#">Oferta de trabajo</a></li>
+            <li><a href="#">Candidatos</a></li>
+            <li><a href="#">Banco de talento</a></li>
+            <li><i class='bx bx-message-square-add' id="btn-abrir-popup"></i></li>
+        </ul>
+    </div>
+    <!-- <button  class="btn-abrir-popup">
+        crear oferta de trabajo 
+    </button> -->
+    <div class="info_contex">
+        <div class="banner">
+            <img src="/maleta.png" alt="Ofertas de trabajo" />
+          </div>
+        <h3>ofertas de trabajo</h3>
+        <span>lista de todas tus ofertas de trabajo. pudes filtarlar por departamente o estado </span>
+    </div>
+    <table>
+        <thead>
+          <tr>
+            <th scope="col">OFERTAS TRABAJO</th>
+            <th scope="col">CREADO EL </th>
+            <th scope="col">CANDIDATOS</th>
+            <th scope="col">ESTADO</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="">Recursos Humanos</td>
+            <td data-label="">hace 7 dias</td>
+            <td data-label="">1</td>
+            <td data-label="">En curso</td>
+          </tr>
+        </tbody>
+      </table>
+
+    
+
+<!-- formulario emergente  -->
+<div id="overlay" class="overlay">
+   <div id="popup" class="popup">
+       <a href="javascript:void(0);" id="btn-cerrar-popup" class="btn-cerrar-popup">
+           <i class="bx bx-x"></i>
+       </a>
+       <h3>Crear oferta de trabajo</h3>
+       <p>anade la informacion basica aqui para crear tu oferta de trabajo</p>
+       <form action="javascript:void(0);">
+           <div class="contenedor-inputs">
+               <input type="text" placeholder="Titulo de la oferta">
+               <input type="email" placeholder="Oficina">
+               <input type="email" placeholder="Equipo">
+           </div>
+           <input type="submit" class="btn-submit" value="Crear oferta de trabajo">
+       </form>
+   </div>	
+</div>
+</body>
+<script src="./making.js" ></script>
+</html>
